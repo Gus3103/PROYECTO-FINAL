@@ -15,29 +15,64 @@
         <nav>
             
 
-            <label for="CV">Seleccione un CV</label>
-            <select name="CV" id="CV">
+            <label >Seleccione un CV</label><BR><BR>
+            <select name="CV" id="CV" >
             
             </select>
         </nav>
 
     
-    
-        <div id="Imagen">
-            
-        </div>
-   
+        <DIV id="ContenedorIzq">
+            <div id="Imagen">
+                
+            </div>
+            <form >
+                <H2>FORMULARIO DE CONTACTO</H2>
+                <label >Contacte a </label>
+                <input id="NombreCV" type="text" disabled><br>
+                <label >Su Nombre</label>
+                <input id="SuNombre" type="text" required><br>
+                <label >Su Telefono</label>
+                <input id ="SuTelefono" type="tel" required><br>
+                <label >Su Mail</label>
+                <input id ="SuMail" type="mail" required ><br>
+                <input id ="Enviar" type="submit"  value="ENVIAR" text-aling="center"><br>
+            </form>
+        </DIV>
+
         <div id ="Datos">
-            <label>NOMBRE</label>
-            <LAbel id="Nombre"></LAbel>
+                <div id="Personal">
+                    <h2>DATOS PERSONALES</h2>
+                    <label class="Etiqueta">NOMBRE</label>
+                    <LAbel class="EtiquetaDat" id="Nombre"></LAbel><br>
+                    <label class="Etiqueta" >CALLE</label>
+                    <LAbel class="EtiquetaDat" id="Calle"></LAbel><br>
+                    <label class="Etiqueta">NUMERO</label>
+                    <LAbel class="EtiquetaDat" id="Numero"></LAbel><br>
+                    <label class="Etiqueta">CIUDAD</label>
+                    <LAbel class="EtiquetaDat" id="Ciudad"></LAbel><br>
+                    <label class="Etiqueta">CODIGO POSTAL</label>
+                    <LAbel class="EtiquetaDat" id="Codigo"></LAbel><br>
+                    <label class="Etiqueta">TELEFONO</label>
+                    <LAbel class="EtiquetaDat" id="Telefono"></LAbel><br>
+                    <label class="Etiqueta">E-MAIL</label>
+                    <LAbel class="EtiquetaDat" id="Email"></LAbel><br>
+                    <label class="Etiqueta">WEBSITE</label>
+                    <LAbel class="EtiquetaDat"id="Website"></LAbel><br>
+
+                </div>
+                <div id="Empleo">
+                    <H2>DATOS LABORALES</H2>
+                    <label class="Etiqueta2">COMPAÑIA</label>
+                    <LAbel id="Compañia"></LAbel><br>
+                    <label class="Etiqueta2">SLOGAN</label>
+                    <LAbel id="Slogan"></LAbel><br>
+                </div>
         </div>
     </section>
-<form >
-    <label >Contacte a esta persona</label>
-    <label >Su Nombre</label>
-</form>
+
     <script src="java_scrip.js"></script>
-    <div id="map" style="width: 300px;height: 300px"></div>
+    
    
       
 </body>

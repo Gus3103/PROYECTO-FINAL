@@ -23,16 +23,24 @@ Fotos[9]="https://tse2.mm.bing.net/th?id=OIP.9Tm405KInf8vxt84DIfHEwHaEo&pid=Api&
 
 window.addEventListener("load",buscarCV)
 
-sel.addEventListener("change",function(){
-    IdSel=this.options[sel.selectedIndex].innerHTML
-    console.log(IdSel)
-    console.log(sel.selectedIndex)
-    console.log(Datos[sel.selectedIndex].email)
-    console.log(Datos[sel.selectedIndex].company.name)
+sel.addEventListener("change",Actualizar)
+
+
+function Actualizar(){
+   
     document.getElementById("Imagen").innerHTML='<img id= "IMAGEN" style="width: 300px;max-height: 400px" src="'+Fotos[sel.selectedIndex]+'" alt ="Foto del CV" >'
     document.getElementById("Nombre").innerHTML=Datos[sel.selectedIndex].name
-    
-})
+    document.getElementById("Calle").innerHTML=Datos[sel.selectedIndex].address.street
+    document.getElementById("Numero").innerHTML=Datos[sel.selectedIndex].address.suite
+    document.getElementById("Ciudad").innerHTML=Datos[sel.selectedIndex].address.city
+    document.getElementById("Codigo").innerHTML=Datos[sel.selectedIndex].address.zipcode
+    document.getElementById("Telefono").innerHTML=Datos[sel.selectedIndex].phone
+    document.getElementById("Email").innerHTML=Datos[sel.selectedIndex].email
+    document.getElementById("Website").innerHTML=Datos[sel.selectedIndex].website
+    document.getElementById("Compañia").innerHTML=Datos[sel.selectedIndex].company.name
+    document.getElementById("Slogan").innerHTML=Datos[sel.selectedIndex].company.catchPhrase
+    document.getElementById("NombreCV").value=Datos[sel.selectedIndex].name
+}
     
 
 
@@ -53,7 +61,7 @@ let Peticion=fetch("https://jsonplaceholder.typicode.com/users")
            
             i=i+1
         });
-        document.getElementById("Imagen").innerHTML='<img id= "IMAGEN" style="width: 300px;max-height: 400px" src="'+Fotos[0]+'" alt ="Foto del CV">'
+        Actualizar()
     })
 
  
